@@ -5,42 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercice de Masha </title>
 </head>
-<form method="get" action="">
 <body>
+    <form method="get" action=""></form>
     <h1>Introducing myself</h1>
+<fieldset>
+    <legend>ID informations</legend>
     <p>
-        <label for="prenom">First Name:</label>
-    <input type="text" name="prenom" id="prenom" placeholder="Ex. : Masha" size="20" maxlength="20">
-    </p>
+        <label for="prenom">First Name:</label><br> <!--placeholder permet de preremplire un champ!-->
+    <input type="text" name="prenom" id="prenom" placeholder="Ex. : Masha" size="20" maxlength="20" autofocus required><br>
+        <label for="nom">Last Name:</label><br><!--autofocus permet de placer automentiquement le curseur dans un un champ!-->
+        <input type="text" name="nom" id="nom" placeholder="Ex. : Mashaury" size=">30" maxlength="20" required>
+    </p><!--required permet de rendre obligatoire un champ de saisie!-->
     <p>
-        <label for="nom">Last Name:</label>
-        <input type="text" name="nom" id="nom" placeholder="Ex. : Mashaury" size=">30" maxlength="20">
-    </p>
-    <p>
-        <p>Login, please:</p>
-        <label for="mail">Email:</label>
-        <input type="email" name="mail" id="mail" placeholder="Ex. : mashara@gmail.com" size="35" maxlength="20">
-        <label for="motdepass">Password:</label>
-        <input type="password" name="motdepass" id="motdepass" size=">40" maxlength="20">
-    </p>
-    <p>
-        <p>Select your gender:</p>
+        <!--uilisation de bouton radio. tous les boutons porten le meme name pour eviter la selection de plusieurs boutons !-->
+        <label>Choose your gender, please:</label><br>
         <label for="female">Femal:</label>
-        <input type="radio" name="genders" value ="female" id="female">
-    </p>
-    <p>
+        <input type="radio" name="genders" value ="female" id="female"><br>
         <label for="male">Male:</label>
-        <input type="radio" name="genders" value ="male" id="male">
+        <input type="radio" name="genders" value ="male" id="male"><br>
+        <label for="other">Other:</label>
+        <input type="radio" name="genders" value ="othe" id="othe"><br>
     </p>
     <p>
-        <label for="bday">Birthday:</label>
-        <input type="date" name="bday" id="bday">
+        <label for="bday">Birthday:</label><br>
+        <input type="date" name="bday" id="bday" required>
+    </p>
+</fieldset>
+<fieldset>
+    <legend>Login informations</legend>
+    <p>
+        <label for="mail">Email:</label><br>
+        <input type="email" name="mail" id="mail" placeholder="Ex. : mashara@gmail.com" size="20" maxlength="20" required><br>
+        <label for="motdepass">Password:</label><br>
+        <input type="password" name="motdepass" id="motdepass" size=">40" maxlength="20" required>
     </p>
     <p>
-        <label for="site">Website:</label>
+        <label for="site">Website:</label><br>
         <input type="url" name="site" id="site">
     </p>
-
-</body>
+    <p>
+        <label for="country">Chose your country, please:</label><br>
+        <select name="country" id="country" required>
+            <option value="USA">United States of America (USA)</option>
+            <option value="UK"> United Kingdom (UK)</option>
+            <option value="Canada">Canada</option>
+            <option value="None" selected>None</option>
+        </select>
+    </p>
+</fieldset>
+    
+    <p>
+       <label for="message">Please, feel free to write a message here:</label><br>
+       <textarea name="message" id="message"></textarea>
+    </p>
+    <p>
+        <label for="bouton">Please, clic here o send the form!</label><br>
+        <input type="submit" value="send">
+     </p>
 </form>
+</body>
 </html>
