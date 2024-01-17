@@ -1,0 +1,11 @@
+p, 
+h1{
+    color:darkcyan;
+}
+fieldset{
+    color:darkblue;
+    font-style:italic;
+}
+::placeholder{
+    color: lightgrey;
+}
